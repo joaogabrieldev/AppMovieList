@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="tads.eaj.ufrn.segundaprovajoaogabriel.Fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cadastraFragment"
+            app:destination="@id/cadastraFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_alteraFragment"
+            app:destination="@id/alteraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastraFragment"
+        android:name="tads.eaj.ufrn.segundaprovajoaogabriel.Fragments.CadastraFragment"
+        android:label="Tela de Cadastro" >
+        <action
+            android:id="@+id/action_cadastraFragment_to_homeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesFragment"
+        android:name="tads.eaj.ufrn.segundaprovajoaogabriel.Fragments.DetalhesFragment"
+        android:label="DetalhesFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="tads.eaj.ufrn.segundaprovajoaogabriel.Fragments.SobreFragment"
+        android:label="SobreFragment" />
+    <fragment
+        android:id="@+id/alteraFragment"
+        android:name="tads.eaj.ufrn.segundaprovajoaogabriel.Fragments.AlteraFragment"
+        android:label="AlteraFragment" >
+        <action
+            android:id="@+id/action_alteraFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
